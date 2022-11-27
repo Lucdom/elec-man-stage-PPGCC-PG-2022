@@ -85,7 +85,7 @@ tracks/2/keys = {
 
 [sub_resource type="Animation" id=26]
 resource_name = "run"
-length = 0.3
+length = 0.4
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("texture:texture")
@@ -121,7 +121,7 @@ tracks/2/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 0, 0, 1, 2 ]
+"values": [ 0, 1, 2, 1 ]
 }
 
 [sub_resource type="RectangleShape2D" id=25]
@@ -144,7 +144,6 @@ anims/idle = SubResource( 2 )
 anims/run = SubResource( 26 )
 
 [node name="collision" type="CollisionShape2D" parent="."]
-visible = false
 shape = SubResource( 25 )
 
 [node name="raycasts" type="Node2D" parent="."]
@@ -161,3 +160,14 @@ position = Vector2( 6, 14 )
 enabled = true
 cast_to = Vector2( 0, 12 )
 collision_mask = 8
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+limit_left = 0
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = true
+smoothing_speed = 10.0
+drag_margin_left = 1.0
+drag_margin_right = 1.0
+editor_draw_limits = true
