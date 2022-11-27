@@ -92,3 +92,15 @@ scale = Vector2( 0.5, 1 )
 enabled = true
 cast_to = Vector2( 16, 0 )
 collision_mask = 41
+
+[node name="ray_ground_right" type="RayCast2D" parent="."]
+position = Vector2( 8, 4 )
+enabled = true
+cast_to = Vector2( 0, 13 )
+collision_mask = 8
+
+[node name="ray_ground_left" type="RayCast2D" parent="."]
+position = Vector2( -8, 4 )
+enabled = true
+cast_to = Vector2( 0, 13 )
+collision_mask = 8

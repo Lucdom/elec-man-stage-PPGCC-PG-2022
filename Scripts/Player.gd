@@ -63,3 +63,5 @@ func _set_animation():
 	if $anim.assigned_animation != anim:
 		$anim.play(anim)
 
+func get_global_position():
+	return position.x
